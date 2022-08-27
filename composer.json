@@ -1,0 +1,54 @@
+{
+  "name": "baum/baum",
+  "type": "library",
+  "description": "Baum is an implementation of the Nested Set pattern for Eloquent models.",
+  "keywords": ["nested set", "laravel", "eloquent", "database", "tree", "hierarchy"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Estanislau Trepat",
+      "email": "estanis@etrepat.com",
+      "homepage": "https://etrepat.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "illuminate/contracts": "^8.0|^9.0",
+    "illuminate/database": "^8.0|^9.0",
+    "illuminate/events": "^8.0|^9.0",
+    "illuminate/support": "^8.0|^9.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.4.4",
+    "phpunit/phpunit": "^8.5.19|^9.5.8",
+    "psy/psysh": "@stable",
+    "squizlabs/php_codesniffer": "*",
+    "illuminate/console": "^8.0|^9.0",
+    "illuminate/filesystem": "^8.0|^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Baum\\": "src/"
+    }
+  },
+  "autoload-dev": {
+      "files": [
+        "tests/suite/Support/helpers.php"
+      ],
+      "psr-4": {
+          "Baum\\Tests\\": "tests/suite/"
+      }
+  },
+  "extra": {
+    "laravel": {
+        "providers": [
+          "Baum\\BaumServiceProvider"
+        ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
